@@ -1,0 +1,159 @@
+@charset "shift_jis";
+
+/* ============================================================= 
+   全体のフォントサイズ　文字色　背景色
+------------------------------------------------------------- */
+body {
+		font-size: 80%;
+		color: #666;
+		background-color: #cc9; /* 背景色 */
+}
+
+#wrapper { background-color: #fff; }
+
+#wrapper-inner {
+		/* 画像の場合 */
+		background: url(../images/backgroung.jpg);
+		/* 色指定の場合 */
+		/*background-color: #コード;*/
+}
+
+/* ============================================================= 
+   リンク
+------------------------------------------------------------- */
+a:link,
+a:visited,
+a:hover,
+a:active { text-decoration: underline; }
+
+a { overflow: hidden; }
+
+a:link { color: #00f; }
+a:visited { color: #90f; }
+a:hover { color: #c33; }
+a:active { color: #f00; }
+
+.logo a,
+.logo a:hover,
+.globalnavi a,
+.globalnavi a:hover,
+.localnavi a,
+.localnavi a:hover,
+.information a,
+.information a:hover { text-decoration: none; }
+
+/* ============================================================= 
+   ヘッダーブロック　文字色を変更
+------------------------------------------------------------- */
+
+/* 見出し */
+h1 { color: #666; }
+h2 { color: #666; }
+
+#home h2 { color: #666; }
+
+/* ロゴ */
+.logo { color: #666; }
+.logo a { color: #666; }
+.logo a:hover { color: #930; }
+
+/* 概要 */
+.description { color: #666; }
+
+/* 電話番号 テキスト */
+.tel dt { color: #666; }
+/* 電話番号 */
+.tel dd {
+		font-size: 150%;
+		color: #666;
+}
+
+/* =============================================================
+   コンテンツブロック　文字色を変更
+------------------------------------------------------------- */
+
+/* 見出し */
+h3,h4,h5,h6 { color: #666; }
+
+/* パン屑リスト */
+p.topicpath a {
+		background-color: #666;
+		color: #fff;
+}
+
+p.topicpath a:hover {
+		background-color: #c33;
+		color: #fff;
+}
+
+/* Page Top */
+p#pagetop a {
+		background-color: #ccc;
+		color: #000;
+}
+
+p#pagetop a:hover {
+		background-color: #666;
+		color: #fff;
+}
+
+/* =============================================================
+   サイドバーブロック　文字色を変更
+------------------------------------------------------------- */
+
+/* サイドバー 見出し */
+.globalnavi .title,
+.localnavi .title,
+.sideinfo .title,
+.calendar .title {
+		color: #996;
+		text-decoration: underline;
+}
+
+/* グローバルナビゲーション */
+.globalnavi a { color: #666; }
+.globalnavi a:hover { color: #c33; }
+
+/* サブメニュー リンク部分 */
+.localnavi a { color: #666; }
+.localnavi a:hover { color: #c33; }
+
+/* インフォメーション部分 */
+.sideinfo dd { color: #666; }
+
+/* =============================================================
+   フッターブロック　文字色を変更
+------------------------------------------------------------- */
+
+#footer { color: #666; }
+
+/* =============================================================
+   トップページ　文字色を変更
+------------------------------------------------------------- */
+
+/* 画像部分 見出し */
+.top-btn span { color: #666; }
+
+/* 画像部分 テキスト */
+.top-btn p { color: #666; }
+
+/* 画像部分 リンク */
+.top-btn a { color: #00f; }
+.top-btn a:hover { color: #c33; }
+
+/* 新着情報部分　日付 */
+.information span { color: #666; }
+
+/* 新着情報部分　リンク */
+.information a { color: #00f; }
+.information a:hover { color: #c33; }
+
+/* =============================================================
+   新着ページ　文字色を変更
+------------------------------------------------------------- */
+
+/* 新着情報ページ部分　日付 */
+.entryday { color: #666; }
+
+/* 新着情報ページ部分　タイトル */
+.entry h3 { color: #666; }

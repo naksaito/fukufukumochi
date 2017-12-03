@@ -1,0 +1,422 @@
+@charset "shift_jis";
+
+/* 一括で全ての要素の余白をゼロに指定 */
+* {
+		margin: 0;
+		padding: 0;
+}
+
+/* -------------------------------------------------------------
+
+[1] レイアウトに関する指定
+[2] ヘッダーブロック内に関する指定
+[3] コンテンツブロック内に関する指定
+[4] サイドバーブロック内に関する指定
+[5] Pagetopに関する指定
+[6] フッターブロック内に関する指定
+[7] CSSデザインサンプルリンク指定
+[8] トップページ用指定
+[9] 新着ページ用指定
+----------------------------------------------------------------
+CSSデザインサンプ [ URL ] http://www.css-designsample.com
+------------------------------------------------------------- */
+
+/* 文字 */
+p {
+		line-height: 1.5em;
+		margin-bottom: 0.5em;
+}
+
+ul {
+		margin-left: 2em;
+		margin-bottom: 1em;
+}
+
+ol {
+		margin-left: 2.5em;
+		margin-bottom: 1em;
+}
+
+li {
+		line-height: 1.5em;
+		margin-bottom: 0.5em;
+}
+
+img { border: 0; }
+
+.clear { clear: both; }
+
+/* -------------------------------------------------------------
+   [1] レイアウトに関する指定 */
+body {
+		text-align: center;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+		padding: 0;
+		margin: 0;
+}
+
+/*-- 全体を囲んでいます --*/
+#wrapper {
+		text-align: left;
+		width: 900px;
+		margin: 20px auto 10px;
+		padding: 10px;
+}
+
+#wrapper-inner { padding: 20px 20px 10px; }
+
+/*-- ヘッダー部分 --*/
+#header { /* 860 */
+		width: 840px;
+		height: 80px;
+		padding: 0 10px;
+		position: relative;
+}
+
+/*-- コンテンツ部分 --*/
+#contents {
+		width: 620px;
+		float: left;
+		padding: 0 10px;
+}
+
+#contents_contents { 
+		width: 600px;
+		float: left;
+		margin-top: 10px;
+}
+
+#contents_left {
+		height: 180px;
+		width: 350px;
+		float: left;
+}
+
+#contents_right {
+		height: 50px;
+		width: 250px;
+		float: right;
+		margin-top: 130px;
+}
+
+/*-- サイドバー部分 --*/
+#sidebar {
+		width: 200px;
+		float: right;
+}
+
+p#pagetop {
+		clear: both;
+		margin: 0;
+}
+
+/*-- フッター部分 --*/
+#footer {
+		width: 100%;
+		overflow: hidden;
+}
+
+/* -------------------------------------------------------------
+   [2] ヘッダーブロック内に関する指定 */
+
+/* 見出し */
+h1 {
+		font-size: 90%;
+		font-weight: normal;
+		width: 620px;
+}
+
+/* サイトタイトル */
+.logo {
+		font-size: 260%;
+		font-weight: bold;
+		font-family: "ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+		margin: 0;
+}
+
+/* 概要 */
+.description {
+		line-height: 1.5em;
+		width: 620px;
+		margin: 0;
+}
+
+/* 電話 */
+.tel {
+		width: 200px;
+		overflow: hidden;
+		margin: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+}
+
+.tel dd {
+		font-weight: bold;
+		height: 45px;
+		line-height: 45px;
+		padding-left: 40px;
+		background: url(../images/bg-tel.jpg) no-repeat 0 100%;
+}
+
+/* -------------------------------------------------------------
+   [3] コンテンツブロック内に関する指定 */
+
+h2 {
+		font-size: 140%;
+		height: 60px;
+		margin-bottom: 10px;
+		padding: 20px 0 0 20px;
+		overflow: hidden;
+		background: #fff url(../images/bg-headline01.jpg) no-repeat 100% 50%;
+}
+
+#home h2 {
+		font-size: 120%;
+		height: auto;
+		margin-bottom: 0;
+		padding: 8px 0 8px 30px;
+		background: url(../images/bg-headline02.jpg) no-repeat 0 100%;
+		border-top: 1px solid #fff;
+		border-bottom: 1px dotted #ccc;
+}
+
+/* パン屑リスト */
+p.topicpath {
+		height: 30px;
+		line-height: 30px;
+		margin: 0;
+}
+
+p.topicpath a {
+		text-decoration: none;
+		font-family: Geneva, Arial, Helvetica, sans-serif;
+		padding: 0 0.2em;
+}
+
+p.topicpath a:hover { text-decoration: none; }
+
+/* 見出し */
+h3,h4,h5,h6 {
+		font-size: 120%;
+		margin-bottom: 1em;
+		padding: 8px 0 8px 30px;
+		background: url(../images/bg-headline02.jpg) no-repeat 0 100%;
+		border-top: 1px solid #fff;
+		border-bottom: 1px dotted #ccc;
+}
+
+#home h3 { margin-bottom: 0; }
+
+h4,h5,h6 { margin-top: 3em; }
+
+/* -------------------------------------------------------------
+   [4] サイドバーブロック内に関する指定 */
+	 
+/* グローバルナビゲーション */
+.globalnavi {
+		width: 200px;
+		margin: 0 0 20px;
+		background-color: #fff;
+}
+
+.globalnavi li {
+		list-style: none;
+		margin: 0;
+}
+
+.globalnavi a {
+		display: block;
+		width: 175px;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 5px 0 20px;
+		background: url(../images/bg-gnav.jpg) no-repeat 0 100%;
+}
+
+.globalnavi a:hover { background: url(../images/bg-gnav.jpg) no-repeat -200px 100%; }
+
+/* サブメニュー */
+.localnavi {
+		margin: 0 0 20px;
+		padding-bottom: 10px;
+		background-color: #fff;
+}
+
+.localnavi li {
+		list-style: none;
+		margin: 0;
+		padding: 2px 5px 2px 20px;
+}
+
+.sideinfo {
+		margin-bottom: 20px;
+		background-color: #fff;
+}
+
+.sideinfo dd {
+		font-size: 95%;
+		padding: 15px 10px;
+}
+
+.calendar {
+		margin-bottom: 20px;
+		background-color: #fff;
+}
+
+.calendar dd p { text-align: center; }
+
+.globalnavi .title,
+.localnavi .title,
+.sideinfo .title,
+.calendar .title {
+		text-align: center;
+		font-weight: bold;
+		height: 25px;
+		padding: 15px 0 0 0;
+		background: #fff url(../images/bg-sidetitle.jpg) no-repeat 0 0;
+}
+
+/* -------------------------------------------------------------
+   [5] Pagetopに関する指定 */
+
+p#pagetop span {
+		display: block;
+		width: 630px;
+		height: 1.6em;
+		overflow: hidden;
+}
+
+p#pagetop a {
+		display: block;
+		font-family: Geneva, Arial, Helvetica, sans-serif;
+		text-decoration: none;
+		text-align: center;
+		width: 6em;
+		height: 1.6em;
+		line-height: 1.6em;
+		float: right;
+}
+
+p#pagetop a:hover { text-decoration: none; }
+
+/* -------------------------------------------------------------
+   [6] フッターブロック内に関する指定 */
+	 
+/* コピーライト */
+#footer p {
+		text-align: center;
+		width: 620px;
+		margin: 0 0 50px 10px;
+		padding: 1em 0 0;
+		border-top: 5px solid #ccc;
+}
+
+/* アドレス */
+address {
+		font-style: normal;
+		line-height: 1.5em;
+		margin: 0;
+}
+
+address span { display: block; }
+
+/* -------------------------------------------------------------
+   [7] CSSデザインサンプルリンク指定 */
+#footer #cds {
+		text-align: right;
+		font-size: 85%;
+		font-family: Geneva, Arial, Helvetica, sans-serif;
+		line-height: 1;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border: 0;
+}
+
+#cds,#cds a,#cds a:hover {
+		text-decoration: none;
+		color: #ccc;
+}
+
+/* -------------------------------------------------------------
+   [8] トップページ用指定 */
+
+.top-btn {/* 620 */
+		list-style-type: none;
+		width: 100%;
+		margin: 0 0 20px;
+		overflow: hidden;
+}
+
+.top-btn li {
+		width: 200px;
+		float: left;
+		margin-bottom: 10px;
+}
+
+.btn01 { margin-right: 10px; }
+.btn02 { margin-right: 10px; }
+
+.top-btn img {
+		display: block;
+		width: 200px;
+		height: 120px;
+}
+
+.top-btn p {
+		text-align: center;
+		font-size: 95%;
+		overflow: hidden;
+		margin: 0 0 0.2em;
+		padding: 2px 0;
+		background-color: #eee;
+}
+
+.top-btn a {
+		text-decoration: none;
+		font-size: 95%;
+		display: block;
+		text-align: right;
+}
+
+.top-btn a:hover { text-decoration: none; }
+
+.information {
+		list-style-type: none;
+		margin: 0 0 20px;
+		padding: 10px 0 0;
+		background-color: #fff;
+}
+
+.information span { padding-right: 1em; }
+
+.information li {
+		list-style: none;
+		line-height: 1.2em;
+		margin: 0;
+		padding: 0.3em 1em;
+		border-bottom: 1px dotted #ccc;
+}
+
+.information a,
+.information a:hover { text-decoration: none; }
+
+/* -------------------------------------------------------------
+   [9] 新着ページ用指定 */
+	 
+.entry {
+		line-height: 1.5em;
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		margin-bottom: 60px;
+}
+
+.entry h3 { margin-bottom: 1em; }
+
+.entry .entryday {
+		font-size: 90%;
+		margin: 0;
+		padding-top: 1em;
+}
