@@ -1,5 +1,6 @@
 package com.fukufuku.home;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,15 +13,18 @@ public class Repository {
     RepositoryInterface repositoryInterface;
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Entity> getMessages() {
-        System.out.println(repositoryInterface.findAll());
-        return repositoryInterface.findAll();
+    public String getMessages() {
+        List<String> getList = new ArrayList<>();
+        for (Entity entity : repositoryInterface.findAll()){
+            getList.add(entity.getId().toString() + ":" + entity.getText());
+        }
+        return getList.toString();
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public Entity postMessages(@RequestBody String message) {
-        Entity entity = new Entity(message);
+    public Entity postMessages(@RequestBody Entity message) {
+        //Entity entity = new Entity(message);
         System.out.println(message);
-        return repositoryInterface.save(entity);
+        return repositoryInterface.save(message);
     }
 }

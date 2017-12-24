@@ -12,15 +12,20 @@ public class Entity implements Serializable {
 
     private String text;
 
-    protected Entity() {}
+    protected Entity() {
+    }
 
     public Entity(String text) {
         this.text = text;
     }
 
-    @Override
-    public String toString() {
-        return String.format(
-                "Customer[id=%d, firstName='%s']", id, text);
+    public Integer getId() {
+        return id;
+    }
+
+    public String getText() {
+        return text;
     }
 }
+
+
