@@ -4,8 +4,19 @@
 <head>
     <meta charset="UTF-8"/>
     <title>fukufuku admin</title>
+    <link rel="stylesheet" href="../static/css/common.css" type="text/css" media="screen" />
 </head>
-<body>
-<h1 th:text="${message}"></h1>
+<body id="home" th:inline="text">
+    <h3 class="clear">新着情報</h3>
+    <div th:each="element : ${messages}" th:unless="${limitCalender.getTime().compareTo(element.getCreatedAt())}==1">
+        <ul class="information">
+            <li><span>[[${element.getCreatedAtFormatted()r}]]</span>[[${element.getText()}]]</li>
+        </ul>
+        <h2></h2>
+    </div>
+    <form th:action="@{/admin}" method="post" th:object="${informationForm}">
+        <input type="text" th:field="*{value}" />
+        <input type="submit" value="登録" />
+    </form>
 </body>
 </html>
