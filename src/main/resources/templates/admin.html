@@ -10,7 +10,7 @@
     <h3 class="clear">新着情報</h3>
     <div th:each="element : ${messages}" th:unless="${limitCalender.getTime().compareTo(element.getCreatedAt())}==1">
         <ul class="information">
-            <li><span>[[${element.getCreatedAtFormatted()r}]]</span>[[${element.getText()}]]</li>
+            <li><span>[[${element.getCreatedAtFormatted()}]]</span>[[${element.getText()}]]</li>
         </ul>
         <h2></h2>
     </div>
